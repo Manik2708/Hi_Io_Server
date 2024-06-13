@@ -1,3 +1,3 @@
 export class InjectionTokens {
-  static RedisUrl: string = 'RedisUrl'
+  static RedisUrl: string = 'RedisUrl';
 }

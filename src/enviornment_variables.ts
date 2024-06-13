@@ -1,2 +1,10 @@
-export const IfRunningOnDocker = process.env.RUNNING_ON_DOCKER!;
-export const RedisUrl: string|undefined = IfRunningOnDocker == 'true' ? 'redis://client:6379': undefined;
+import { configDotenv } from 'dotenv';
+
+configDotenv();
+
+export const RedisUrl: string | undefined =
+  process.env.REDIS_URL == null || undefined
+    ? undefined
+    : process.env.REDIS_URL;
+export const Port: string =
+  process.env.PORT == null || undefined ? '0' : process.env.PORT;

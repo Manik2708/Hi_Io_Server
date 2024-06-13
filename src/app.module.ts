@@ -8,8 +8,8 @@ import { RedisUrl } from './enviornment_variables';
     WebSocketsGateWay,
     {
       provide: InjectionTokens.RedisUrl,
-      useValue: RedisUrl
-    }
+      useValue: RedisUrl,
+    },
   ],
 })
 export class AppModule {}
